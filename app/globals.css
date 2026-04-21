@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  border-color: theme("colors.line");
+}
+
+body {
+  min-height: 100vh;
+  background-color: #070a11;
+  background-image: radial-gradient(
+      circle at 10% -10%,
+      rgba(59, 130, 246, 0.08),
+      transparent 32%
+    ),
+    radial-gradient(circle at 90% 0%, rgba(147, 197, 253, 0.09), transparent 36%),
+    radial-gradient(circle at 50% 100%, rgba(30, 64, 175, 0.08), transparent 42%);
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.35);
+  color: #f8fbff;
+}
+
+.glass-card {
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+
+.section-spacing {
+  @apply py-20 md:py-24;
+}
+
+.soft-divider {
+  @apply border border-white/10;
+}
